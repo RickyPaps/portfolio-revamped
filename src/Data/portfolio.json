@@ -1,0 +1,40 @@
+{
+  "portfolio": [
+    {
+      "cover": "/portfolio/mrp_pwa/mrpe001_mr_price.jpg",
+      "title": "Mr Price PWA",
+      "description": "Ionic React, SCSS, GraphQL, Magento 2",
+      "url": "htttps://google.com"
+    },
+    {
+      "cover": "/portfolio/mrp_pwa/mrpe001_mr_price.jpg",
+      "title": "Mr Price PWA",
+      "description": "Ionic React, SCSS, GraphQL, Magento 2",
+      "url": "htttps://google.com"
+    },
+    {
+      "cover": "/portfolio/mrp_pwa/mrpe001_mr_price.jpg",
+      "title": "Mr Price PWA",
+      "description": "Ionic React, SCSS, GraphQL, Magento 2",
+      "url": "htttps://google.com"
+    },
+    {
+      "cover": "/portfolio/mrp_pwa/mrpe001_mr_price.jpg",
+      "title": "Mr Price PWA",
+      "description": "Ionic React, SCSS, GraphQL, Magento 2",
+      "url": "htttps://google.com"
+    },
+    {
+      "cover": "/portfolio/mrp_pwa/mrpe001_mr_price.jpg",
+      "title": "Mr Price PWA",
+      "description": "Ionic React, SCSS, GraphQL, Magento 2",
+      "url": "htttps://google.com"
+    },
+    {
+      "cover": "/portfolio/mrp_pwa/mrpe001_mr_price.jpg",
+      "title": "Mr Price PWA",
+      "description": "Ionic React, SCSS, GraphQL, Magento 2",
+      "url": "htttps://google.com"
+    }
+  ]
+}
