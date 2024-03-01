@@ -4,25 +4,36 @@ import Logo from '../../assets/images/portolio-letter.png'
 import LogoSub from '../../assets/images/logo-sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
+  faBars,
+  faClose,
   faEnvelope,
   faHome,
   faSuitcase,
   faUser,
 } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { useState } from 'react'
 
 const Sidebar = () => {
+  const [showMobile, setShowMobile] = useState(false)
+
   return (
     <div className="nav-bar">
       <Link className="logo" to="/">
         <img src={Logo} alt="logo" />
         <img src={LogoSub} className="sub-logo" alt="sub-logo" />
       </Link>
-      <nav>
-        <NavLink exact="true" activeclassname="active" to="/">
+      <nav className={showMobile ? 'mobile-show' : ''}>
+        <NavLink
+          exact="true"
+          activeclassname="active"
+          to="/"
+          onClick={() => setShowMobile(false)}
+        >
           <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
         </NavLink>
         <NavLink
+          onClick={() => setShowMobile(false)}
           exact="true"
           activeclassname="active"
           className="about-link"
@@ -31,6 +42,7 @@ const Sidebar = () => {
           <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
         </NavLink>
         <NavLink
+          onClick={() => setShowMobile(false)}
           exact="true"
           activeclassname="active"
           className="portfolio-link"
@@ -39,6 +51,7 @@ const Sidebar = () => {
           <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
         </NavLink>
         <NavLink
+          onClick={() => setShowMobile(false)}
           exact="true"
           activeclassname="active"
           className="contact-link"
@@ -46,6 +59,13 @@ const Sidebar = () => {
         >
           <FontAwesomeIcon icon={faSuitcase} color="#4d4d4e" />
         </NavLink>
+        <FontAwesomeIcon
+          icon={faClose}
+          color="#ffd700"
+          size="3x"
+          className="mobile-close-icon"
+          onClick={() => setShowMobile(false)}
+        />
       </nav>
       <ul>
         <li>
@@ -67,6 +87,13 @@ const Sidebar = () => {
           </a>
         </li>
       </ul>
+      <FontAwesomeIcon
+        icon={faBars}
+        color="#ffd700"
+        size="3x"
+        className="mobile-menu-icon"
+        onClick={() => setShowMobile(true)}
+      />
     </div>
   )
 }

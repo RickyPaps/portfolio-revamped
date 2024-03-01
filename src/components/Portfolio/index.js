@@ -15,6 +15,7 @@ const Portfolio = () => {
       clearTimeout(Timeout)
     }
   }, [])
+  
 
   const renderPortfolio = ({ portfolio }) => {
     return (
