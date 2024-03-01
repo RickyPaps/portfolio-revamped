@@ -125,3 +125,36 @@
         }
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .nav-bar {
+        background: transparent;
+        position: initial;
+        height: auto;
+        min-height: auto;
+
+        ul,
+        nav {
+            display: none;
+        }
+        nav {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: #181818;
+            top: 0;
+            left: 0;
+            margin: 0;
+            position: fixed;
+            z-index: 2;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        opacity: 1;
+    }
+}
