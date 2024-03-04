@@ -9,7 +9,7 @@
 
     .logo {
         display: block;
-        padding: 8px 0;
+        padding: 8px 8px;
 
         img {
             display: block;
@@ -137,10 +137,18 @@
         position: initial;
         height: auto;
         min-height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
 
         ul,
         nav {
             display: none;
+        }
+
+        .logo {
+            padding: 8px 15px;
         }
         nav {
             // display: block;

@@ -1,0 +1,52 @@
+.mobile-wrapper {
+    display: none;
+    margin: 0 15px;
+    height: 100%;
+
+    .ham {
+        margin-left: auto;
+        z-index: 999;
+        position: relative;
+
+        span {
+            font-size: 3rem;
+            cursor: pointer;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 99;
+
+        background-color: #fff;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        // for animation
+        opacity: 0;
+        height: 0;
+
+        li {
+            margin: 1rem 0;
+            font-size: 5rem;
+        }
+    }
+
+    a {
+        color: #222;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .mobile-wrapper {
+        display: block;
+    }
+}
