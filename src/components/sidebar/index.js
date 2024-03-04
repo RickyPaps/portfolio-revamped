@@ -13,6 +13,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { useState } from 'react'
+import MobileMenu from '../Mobile-Menu'
 
 const Sidebar = () => {
   const [showMobile, setShowMobile] = useState(false)
@@ -87,13 +88,14 @@ const Sidebar = () => {
           </a>
         </li>
       </ul>
-      <FontAwesomeIcon
+      <MobileMenu />
+      {/* <FontAwesomeIcon
         icon={faBars}
         color="#ffd700"
         size="3x"
         className="mobile-menu-icon"
         onClick={() => setShowMobile(true)}
-      />
+      /> */}
     </div>
   )
 }
