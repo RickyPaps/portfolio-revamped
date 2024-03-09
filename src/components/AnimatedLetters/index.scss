@@ -16,6 +16,7 @@
     min-width: 10px;
     display: inline-block;
     animation-fill-mode: both;
+    cursor: pointer;
 
     &:hover {
         animation: rubberBand 1s;
