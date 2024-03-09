@@ -32,36 +32,39 @@
     input[type="email"] {
         width: 100%;
         border: 0;
-        background: #115173;
+        background: #eee;
         height: 50px;
         font-size: 16px;
-        color: #fff;
+        color: #000;
         padding: 0 20px;
         box-sizing: border-box;
+        border-radius: 4px;
     }
 
     textarea {
         width: 100%;
         border: 0;
-        background: #115173;
+        background: #eee;
         height: 50px;
         font-size: 16px;
-        color: #fff;
+        color: #000;
         padding: 20px;
         min-height: 150px;
         box-sizing: border-box;
+        border-radius: 4px;
         resize: none;
     }
 
     .flat-button {
-        color: #ffd700;
+        color: #000;
         background: 0 0;
         font-size: 11px;
         letter-spacing: 3px;
         text-decoration: none;
         padding: 8px 10px;
-        border: 1px solid #ffd700;
+        border: 1px solid #000;
         border-radius: 4px;
+        cursor: pointer;
     }
 }
 
@@ -85,7 +88,7 @@
         font-size: 16px;
         display: block;
         padding-top: 20px;
-        color: #ffd700;
+        color: #fff;
     }
 }
 
@@ -116,6 +119,6 @@
     }
 
     .info-map {
-        display: none   ;
+        display: none;
     }
 }
