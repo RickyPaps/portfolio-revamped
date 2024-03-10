@@ -7,6 +7,9 @@
     z-index: 3;
     min-height: 500px;
 
+    visibility: hidden;
+    transform: translateX(-200%);
+    // animation: bounceIn 1s 1s;
     .logo {
         display: block;
         padding: 8px 8px;
@@ -40,6 +43,8 @@
             height: 51px;
             position: relative;
             text-decoration: none;
+            visibility: hidden;
+            transform: translateY(200%);
 
             i {
                 transition: all 0.3s ease-in-out;
@@ -112,6 +117,8 @@
         margin: 0;
 
         li {
+            visibility: hidden;
+            transform: translateY(200%);
             a {
                 padding: 7px 0;
                 display: block;

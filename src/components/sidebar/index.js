@@ -4,7 +4,6 @@ import Logo from '../../assets/images/portolio-letter.png'
 import LogoSub from '../../assets/images/logo-sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faBars,
   faClose,
   faEnvelope,
   faHome,
@@ -14,17 +13,24 @@ import {
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { useState } from 'react'
 import MobileMenu from '../Mobile-Menu'
+import { useRef } from 'react'
+import { SidebarAnimation } from './Animation'
 
 const Sidebar = () => {
   const [showMobile, setShowMobile] = useState(false)
+  const menuRef = useRef(null)
+  const menuLinks = useRef(null)
+  const socialLinks = useRef(null)
+
+  SidebarAnimation(menuLinks, menuRef, socialLinks)
 
   return (
-    <div className="nav-bar">
+    <div className="nav-bar" ref={menuRef}>
       <Link className="logo" to="/">
         <img src={Logo} alt="logo" />
         <img src={LogoSub} className="sub-logo" alt="sub-logo" />
       </Link>
-      <nav className={showMobile ? 'mobile-show' : ''}>
+      <nav className={showMobile ? 'mobile-show' : ''} ref={menuLinks}>
         <NavLink
           exact="true"
           activeclassname="active"
@@ -68,7 +74,7 @@ const Sidebar = () => {
           onClick={() => setShowMobile(false)}
         />
       </nav>
-      <ul>
+      <ul ref={socialLinks}>
         <li>
           <a
             target="_blank"
@@ -89,13 +95,6 @@ const Sidebar = () => {
         </li>
       </ul>
       <MobileMenu />
-      {/* <FontAwesomeIcon
-        icon={faBars}
-        color="#ffd700"
-        size="3x"
-        className="mobile-menu-icon"
-        onClick={() => setShowMobile(true)}
-      /> */}
     </div>
   )
 }
