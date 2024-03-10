@@ -1,9 +1,11 @@
 .home-page {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
     .text-zone {
-        position: absolute;
+        position: relative;
         left: 10%;
-        top: 50%;
-        transform: translateY(-50%);
         width: 40%;
         max-height: 90%;
     }
@@ -75,7 +77,9 @@
         &:hover {
             background: #eee;
             color: #333;
-            text-shadow: 0 0 0.65px #333, 0 0 0.65px #333;
+            text-shadow:
+                0 0 0.65px #333,
+                0 0 0.65px #333;
         }
     }
 }
@@ -88,6 +92,8 @@
     }
 
     .home-page {
+        display: block;
+        text-align: center;
         .text-zone {
             position: initial;
             width: 100%;
@@ -104,24 +110,15 @@
             text-align: center;
         }
 
-        // .logo-container {
-        //     position: relative;
-        //     width: 100px;
-        //     height: auto;
-        //     top: 50px;
-        //     right: 0;
-        //     box-sizing: border-box;
-        //     margin: auto;
-        //     left: 0;
-        // }
+        .animation-container {
+            position: relative;
+            height: auto;
+            box-sizing: border-box;
 
-        // svg {
-        //     position: absolute;
-        //     top: auto;
-        //     right: auto;
-        //     bottom: auto;
-        //     left: 0;
-        //     margin: auto;
-        // }
+            .lottie-player {
+                height: 100%;
+                width: 100%;
+            }
+        }
     }
 }

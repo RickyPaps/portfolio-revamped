@@ -6,8 +6,9 @@
     .ham {
         margin-left: auto;
         z-index: 999;
-        position: relative;
-
+        position: absolute;
+        top: 15px;
+        right: 15px;
         span {
             font-size: 3rem;
             cursor: pointer;
@@ -21,14 +22,14 @@
         top: 0;
         left: 0;
         z-index: 99;
-
         background-color: #fff;
-
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
 
+        padding: 0;
+        margin: 0;
         // for animation
         opacity: 0;
         height: 0;

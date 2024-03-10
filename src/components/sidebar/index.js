@@ -25,77 +25,79 @@ const Sidebar = () => {
   SidebarAnimation(menuLinks, menuRef, socialLinks)
 
   return (
-    <div className="nav-bar" ref={menuRef}>
-      <Link className="logo" to="/">
-        <img src={Logo} alt="logo" />
-        <img src={LogoSub} className="sub-logo" alt="sub-logo" />
-      </Link>
-      <nav className={showMobile ? 'mobile-show' : ''} ref={menuLinks}>
-        <NavLink
-          exact="true"
-          activeclassname="active"
-          to="/"
-          onClick={() => setShowMobile(false)}
-        >
-          <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
-        </NavLink>
-        <NavLink
-          onClick={() => setShowMobile(false)}
-          exact="true"
-          activeclassname="active"
-          className="about-link"
-          to="/about"
-        >
-          <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
-        </NavLink>
-        <NavLink
-          onClick={() => setShowMobile(false)}
-          exact="true"
-          activeclassname="active"
-          className="portfolio-link"
-          to="/portfolio"
-        >
-          <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
-        </NavLink>
-        <NavLink
-          onClick={() => setShowMobile(false)}
-          exact="true"
-          activeclassname="active"
-          className="contact-link"
-          to="/contact"
-        >
-          <FontAwesomeIcon icon={faSuitcase} color="#4d4d4e" />
-        </NavLink>
-        <FontAwesomeIcon
-          icon={faClose}
-          color="#ffd700"
-          size="3x"
-          className="mobile-close-icon"
-          onClick={() => setShowMobile(false)}
-        />
-      </nav>
-      <ul ref={socialLinks}>
-        <li>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.linkedin.com/in/ricky-papini-427ba0146/"
+    <>
+      <div className="nav-bar" ref={menuRef}>
+        <Link className="logo" to="/">
+          <img src={Logo} alt="logo" />
+          <img src={LogoSub} className="sub-logo" alt="sub-logo" />
+        </Link>
+        <nav className={showMobile ? 'mobile-show' : ''} ref={menuLinks}>
+          <NavLink
+            exact="true"
+            activeclassname="active"
+            to="/"
+            onClick={() => setShowMobile(false)}
           >
-            <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://github.com/RickyPaps?tab=repositories"
+            <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
+          </NavLink>
+          <NavLink
+            onClick={() => setShowMobile(false)}
+            exact="true"
+            activeclassname="active"
+            className="about-link"
+            to="/about"
           >
-            <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
-          </a>
-        </li>
-      </ul>
+            <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
+          </NavLink>
+          <NavLink
+            onClick={() => setShowMobile(false)}
+            exact="true"
+            activeclassname="active"
+            className="portfolio-link"
+            to="/portfolio"
+          >
+            <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
+          </NavLink>
+          <NavLink
+            onClick={() => setShowMobile(false)}
+            exact="true"
+            activeclassname="active"
+            className="contact-link"
+            to="/contact"
+          >
+            <FontAwesomeIcon icon={faSuitcase} color="#4d4d4e" />
+          </NavLink>
+          <FontAwesomeIcon
+            icon={faClose}
+            color="#ffd700"
+            size="3x"
+            className="mobile-close-icon"
+            onClick={() => setShowMobile(false)}
+          />
+        </nav>
+        <ul ref={socialLinks}>
+          <li>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/ricky-papini-427ba0146/"
+            >
+              <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/RickyPaps?tab=repositories"
+            >
+              <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
+            </a>
+          </li>
+        </ul>
+      </div>
       <MobileMenu />
-    </div>
+    </>
   )
 }
 

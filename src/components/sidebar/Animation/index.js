@@ -4,7 +4,6 @@ import gsap from 'gsap-trial'
 export const SidebarAnimation = (menuLinks, menuRef, socialLinks) => {
   useLayoutEffect(() => {
     var sidebarAnim = gsap.timeline()
-    debugger
     const links = menuLinks.current.querySelectorAll('a')
     const socials = socialLinks.current.querySelectorAll('li')
 
