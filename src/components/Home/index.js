@@ -3,11 +3,23 @@ import LogoTitle from '../../assets/images/portolio-letter.png'
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import AnimatedLetters from '../AnimatedLetters'
-import Logo from './Logo'
+// import Logo from './Logo'
 import Loader from 'react-loaders'
+import Lottie from 'react-lottie'
+import animationData from '../../lotties/home-animation'
 
 const Home = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
+
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+      className: "lottie-player"
+    },
+  }
 
   useEffect(() => {
     let Timeout = setTimeout(() => {
@@ -29,13 +41,13 @@ const Home = () => {
             <img src={LogoTitle} alt="dev" />
             <AnimatedLetters
               letterClass={letterClass}
-              strArray={"icky Papini".split("")}
+              strArray={'icky Papini'.split('')}
               id={15}
             />
             <br />
             <AnimatedLetters
               letterClass={letterClass}
-              strArray={"Web Developer".split("")}
+              strArray={'Web Developer'.split('')}
               id={22}
             />
           </h1>
@@ -43,6 +55,13 @@ const Home = () => {
           <Link to="/contact" className="flat-button">
             Contact Me
           </Link>
+        </div>
+        <div className="animation-container">
+          <Lottie
+            id="lottie-icon"
+            options={defaultOptions}
+            class="lottie-player"
+          />
         </div>
         {/* <Logo /> */}
       </div>
