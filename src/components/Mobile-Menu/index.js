@@ -1,10 +1,13 @@
 import gsap from 'gsap-trial'
 import './index.scss'
 import { useLayoutEffect, useRef } from 'react'
+import { useState } from 'react'
 
 const MobileMenu = () => {
   const hamRef = useRef(null)
   const menuRef = useRef(null)
+
+  const [isOpen, setisOpen] = useState(false)
 
   useLayoutEffect(() => {
     if (hamRef.current !== null) {
@@ -14,27 +17,20 @@ const MobileMenu = () => {
       tl.to(menuRef.current, {
         duration: 0.9,
         opacity: 1,
-        height: '100vh', // change this to 100vh for full-height menu
+        height: '100vh',
         ease: 'expo.inOut',
       })
-      tl.from(
+      tl.to(
         links,
         {
-          duration: 0.4,
-          y: 40,
-          opacity: 0,
-          stagger: 0.1,
-          ease: 'expo.in',
+          duration: 1.5,
+          y: 0,
+          autoAlpha: 1,
+          stagger: 0.2,
+          ease: 'power3.inOut',
         },
-        '-=0.5'
+        '-=.5'
       )
-      tl.to(links, {
-        duration: 0.4,
-        y: 20,
-        opacity: 1,
-        stagger: 0.1,
-        ease: 'expo.out',
-      })
 
       tl.reverse()
 
@@ -44,10 +40,21 @@ const MobileMenu = () => {
     }
   }, [hamRef])
 
+  const handleToggle = () => {
+    setisOpen((prev) => !prev)
+  }
+
   return (
     <div className="mobile-wrapper">
-      <div className="ham" ref={hamRef}>
-        <span>☰</span>
+      <div
+        id="hamburger"
+        className={isOpen ? 'ham open' : 'ham'}
+        ref={hamRef}
+        onClick={() => handleToggle()}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
       <ul className="main-menu" ref={menuRef}>
